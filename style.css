@@ -13,7 +13,7 @@
 
  :root {
    --main-color: #033a80;
-   --bg-color: #fff;
+     background:#F5F4F4;
    --text-color: #0f0c27;
    --hover: hsl(260, 100%, 51%);
    --big-font: 3.2rem;
@@ -268,6 +268,7 @@
   padding: 16px;
   text-align: center;
   background-color: #f1f1f1;
+  height: 500px;
 }
 
  .services-content {
@@ -347,8 +348,9 @@
 
  .contact_column {
   float: left;
-  width: 50%;
+  width: 25%;
   padding: 0 10px;
+
 }
 
 /* Remove extra left and right margins, due to padding */
@@ -361,6 +363,13 @@
   clear: both;
 }
 
+.contact_card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  height: 300px;
+}
 /* Responsive columns */
 @media screen and (max-width: 600px) {
   .contact_column {
@@ -368,6 +377,14 @@
     display: block;
     margin-bottom: 20px;
   }
+}
+
+.contact_card p{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  height: 150px;
 }
 
  form input,
