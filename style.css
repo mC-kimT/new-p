@@ -199,6 +199,45 @@
    text-align: justify;
  }
 
+
+ /* about second page start */
+
+.about_card p{
+  background-color: lightgrey;
+  width: 100px;
+  border: 5px;
+  padding: 5px;
+  margin: 20px;
+  border-style: double;
+  border-color: #22cf91;
+}
+.about_column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+
+}
+
+/* Remove extra left and right margins, due to padding */
+.about_row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.about_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .about_column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+ }
+}
+
+/* about second page end*/
  .information {
    margin: 1rem 0 1.4rem;
  }
@@ -218,7 +257,7 @@
    margin-left: 1rem;
  }
 
-.skills-heading{
+.education-heading{
  box-sizing: border-box;
 
 }
@@ -262,24 +301,74 @@
   }
 }
 
-/* Style the counter cards */
-.card {
+/* Skills design */
+
+.skill_card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
   background-color: #f1f1f1;
   height: 500px;
+  width: 100%;
 }
 
- .services-content {
+
+.skill_card p{
+  background-color: lightgrey;
+  width: 450px;
+  border: 5px;
+  padding: 5px;
+  margin: 20px;
+  border-style: double;
+  border-color: #22cf91;
+}
+.skill_column {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.skill_row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.skill_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .skill_column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+
+ .certificate-content {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
    justify-content: center;
    gap: 1rem;
    margin-top: 2rem;
+   height: 600px;
  }
+ .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  height: 500px;
+  width: 100%;
 
- .services-box {
+}
+
+
+ .certificate-box {
    padding: 20px;
    width: 260px;
    display: flex;
@@ -292,31 +381,31 @@
    height: 300px;
  }
 
- .services-box:hover {
+ .certificate-box:hover {
    background-color: #02225a;
  }
 
- .services-box h3 {
+ .certificate-box h3 {
    font-size: 1rem;
    font-weight: 600;
    margin: 0.7rem 0 0.4rem;
  }
 
- .services-box:hover h3 {
+ .certificate-box:hover h3 {
    color: #fff;
  }
 
- .services-box .bx {
+ .certificate-box .bx {
    padding-top: 2rem;
    font-size: 54px;
    color: var(--main-color);
  }
 
- .services-box:hover .bx {
+ .certificate-box:hover .bx {
    color: #22cf91;
  }
 
-.services-box a.btn{
+.certificate-box a.btn{
   background: var(--main-color);
   color: #fff;
   padding: 0.7rem 1.3rem;
@@ -329,7 +418,7 @@
   display: inline-block;
 }
 
- .services-box:hover a {
+ .certificate-box:hover a {
    color: #8b8a8f;
  }
 
@@ -376,9 +465,8 @@
     width: 100%;
     display: block;
     margin-bottom: 20px;
-  }
+ }
 }
-
 .contact_card p{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
@@ -386,6 +474,7 @@
   background-color: #f1f1f1;
   height: 150px;
 }
+
 
  form input,
  textarea {
@@ -408,8 +497,6 @@
    resize: none;
    height: 200px;
  }
-
- 
 
  .footer {
    display: grid;
@@ -448,7 +535,7 @@
  }
 
  /* For Mobile */
- @media (max-width: 991px) {
+ @media (max-width: 600px) {
    header {
      padding: 18px 4%;
    }
@@ -458,14 +545,14 @@
    }
  }
 
- @media (max-width: 881px) {
+ @media (max-width: 600px) {
    :root {
      --big-font: 2.7rem;
      --medium-font: 1.4rem;
    }
  }
 
- @media (max-width: 768px) {
+ @media (max-width: 600px) {
    :root {
      --big-font: 2.4rem;
      --medium-font: 1.2rem;
@@ -535,20 +622,10 @@
      justify-content: center;
    }
 
-   .skills-container {
+   .education-container {
      grid-template-columns: 1fr;
    }
-
-   .skills-img img {
-     padding-left: 0;
-   }
-
-   .skills-img {
-     padding-top: 2rem;
-     display: flex;
-     justify-content: center;
-   }
-
+  
    .contact-form form {
      width: 300px;
    }
@@ -558,7 +635,7 @@
    }
  }
 
- @media (max-width: 340px) {
+ @media (max-width: 600px) {
    :root {
      --big-font: 1.7rem;
      --medium-font: 1.1rem;
@@ -584,4 +661,7 @@
    .contact-button {
      margin-left: 25%;
    }
+  .card p{
+    width: 300px;
+  }
  }
